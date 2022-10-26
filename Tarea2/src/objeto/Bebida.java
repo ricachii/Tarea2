@@ -4,10 +4,6 @@
  */
 package objeto;
 
-/**
- *
- * @author Nicolas
- */
 public class Bebida {
     
 }

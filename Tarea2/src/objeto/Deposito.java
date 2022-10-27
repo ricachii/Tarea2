@@ -4,7 +4,6 @@ package objeto;
 import java.util.ArrayList;
 
 public class Deposito {
-    
     private ArrayList<Bebida> a1;
     
     public Deposito(){
@@ -24,5 +23,8 @@ public class Deposito {
         }
         
     }   
+    public boolean empty(){
+       return a1.isEmpty();
+    }
 }
     

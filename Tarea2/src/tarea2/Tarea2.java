@@ -2,7 +2,12 @@ package tarea2;
 import objeto.Moneda100;
 import objeto.Moneda500;
 import objeto.Moneda1000;
-
+import objeto.CocaCola;
+import objeto.Fanta;
+import objeto.Sprite;
+import objeto.Expendedor;
+import objeto.Deposito;
+import objeto.Comprador;
 
 
 public class Tarea2 {  
@@ -11,6 +16,6 @@ public class Tarea2 {
         
         System.out.println(m.getValor() + " " +  m.getSerie());
        
-        
+       
     }   
 }

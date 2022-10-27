@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Deposito {
     private ArrayList<Bebida> a1;
-    
+    private int vuelto;
     public Deposito(){
         a1 = new ArrayList();
     }

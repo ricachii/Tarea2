@@ -17,6 +17,7 @@ private Deposito coca,sprite,fanta;
         this.precio= precio;
         
         
+        
     for(int i=0;i<6;i++){  //Etiquetando bebidas
         
         coca.addBebida(new CocaCola(i+100)); //Numero de serie 
@@ -27,6 +28,46 @@ private Deposito coca,sprite,fanta;
           }
     
     
+    public int NoHayBebidaException(Moneda m, int Tipo){
+        if(m!=null){
+            if(Tipo == COCA && coca.empty() == true){
+                vuelto = m.getValor();
+                return vuelto;
+            }
+            if(Tipo == SPRITE && sprite.empty() == true){
+                vuelto = m.getValor();
+                return vuelto;
+            }
+            if(Tipo == FANTA && fanta.empty() == true){
+                vuelto = m.getValor();
+                return vuelto;
+            }
+        }
+    return 0;
+    }
+    public int PagoInsuficienteException(Moneda m, int Tipo){
+        if(m!= null){
+            if(Tipo == COCA && precio > m.getValor() && coca.empty() == false){
+                vuelto = m.getValor();
+                return m.getValor();
+            }
+            if(Tipo == SPRITE && precio > m.getValor() && sprite.empty() == false){
+                vuelto = m.getValor();
+                return m.getValor();
+            }
+            if(Tipo == FANTA && precio > m.getValor() && fanta.empty() == false){
+                vuelto = m.getValor();
+                return m.getValor();
+            }
+        }
+    return 0;
+    }
+    public String PagoIncorrectoExeption(Moneda m, int Tipo){
+        if(m == null){
+            return "Pago incorrecto";
+        }
+    return null;
+    }
     
     public Bebida comprarBebida(Moneda m, int Tipo){ //Creacion de Metodo del tipo Bebida para comprar una bebida
         

@@ -1,6 +1,6 @@
 package objeto;
 
-abstract class Bebida{
+public abstract class Bebida{
     private int Serie;
     
     public Bebida(int serie) {

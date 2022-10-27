@@ -1,6 +1,6 @@
 package objeto;
 
-class CocaCola extends Bebida{
+public class CocaCola extends Bebida{
     public CocaCola(int Serie){
         super(Serie);
     }

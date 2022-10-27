@@ -1,6 +1,6 @@
 package objeto;
 
-class Comprador {
+public class Comprador {
     private Expendedor E;
     private Moneda100 M;
     private Moneda500 M5;

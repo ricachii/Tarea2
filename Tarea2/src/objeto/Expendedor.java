@@ -1,7 +1,7 @@
 package objeto;
 
 
-class Expendedor {
+public class Expendedor {
     
 private int precio,vuelto;
 public static final int COCA=1;

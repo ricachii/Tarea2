@@ -37,6 +37,5 @@ public class Tarea2 {
         
         
        
-       
     }   
 }

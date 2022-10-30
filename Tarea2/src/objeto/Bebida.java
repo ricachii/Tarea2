@@ -9,4 +9,5 @@ public abstract class Bebida{
     public int getserie(){
         return Serie;
     }
+    public abstract String beber();
 }

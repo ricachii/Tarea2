@@ -5,6 +5,6 @@ package objeto;
         super(Serie);
     }
     public String beber(){
-        return new String("Has comprado una Fanta");
+        return new String("Fanta");
     }
 }

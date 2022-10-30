@@ -2,7 +2,7 @@
 package objeto;
 
 public class Moneda100 extends Moneda {
-     public Moneda100(){
+    public Moneda100(){
         super();
     }
     public int getValor(){

@@ -5,6 +5,6 @@ public class CocaCola extends Bebida{
         super(Serie);
     }
     public String beber(){
-        return new String("Has comprado una Coca-cola");
+        return new String("Coca-cola");
     }
 }

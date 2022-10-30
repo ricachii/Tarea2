@@ -5,7 +5,7 @@ public class Sprite extends Bebida{
         super(Serie);
     }
     public String beber(){
-        return new String("Has comprado una Sprite");
+        return new String("Sprite");
     }
 }
 

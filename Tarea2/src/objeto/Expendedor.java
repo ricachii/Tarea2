@@ -37,9 +37,9 @@ public class Expendedor {
             } else {
 
                 if (m != null) {
-                    if ((Tipo == COCA && coca.empty() == true) || (Tipo == SPRITE && sprite.empty() == true) || (Tipo == FANTA && fanta.empty() == true)) {
+                    if ((Tipo == COCA && coca.empty() == true) || (Tipo == SPRITE && sprite.empty() == true) || (Tipo == FANTA && fanta.empty() == true) || Tipo <= 0 || Tipo > 3) {
                         dep.addMoneda(m);
-                        throw new NoHayBebidaException("Deposito Vacio no se puede entregar una bebida");
+                        throw new NoHayBebidaException("Deposito Vacio o codigo de bebida erroneo");
 
                     } else {
                         if (Tipo == COCA && m.getValor() >= precio && coca.empty() == false) {

@@ -1,5 +1,6 @@
 package objeto;
 
+
 public class Expendedor {
     
 private int precio,vuelto;

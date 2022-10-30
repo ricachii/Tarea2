@@ -20,7 +20,8 @@ public class DepositoVuelto {
             return a1.remove(0);
         }
         
-    }   
+    }
+   
     public boolean empty(){
        return a1.isEmpty();
     }

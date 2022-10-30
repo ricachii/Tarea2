@@ -6,12 +6,18 @@ public abstract class Moneda {
         
     }
     
-    public String getSerie(){
-        return this.toString();
+    public int getSerie(){
+        return this.hashCode();
     }
 
    
     public abstract int getValor();
+    
+  
+    
+
+    
+   
     
     
 }

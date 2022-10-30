@@ -9,4 +9,7 @@ public class Moneda100 extends Moneda {
         return 100;
     }
     
+    public String tostring(){
+        return "El numero de serie de la moneda es: " + getSerie() + " Y su valor es: "+ getValor();
+    }
 }

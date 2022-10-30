@@ -24,7 +24,19 @@ public class Expendedor {
         }
     }
 
- 
+    public int getSerie(int Tipo){
+        if(Tipo == 1 && coca.empty() == false){
+           return coca.getSerie();
+        }
+        
+        if(Tipo == 2 && sprite.empty() == false){
+           return sprite.getSerie();
+        }
+        if(Tipo == 3 && fanta.empty() == false){
+           return fanta.getSerie();
+        }
+        return 0;
+    }
 
     public Bebida comprarBebida(Moneda m, int Tipo) throws PagoIncorrectoException, objeto.NoHayBebidaException, objeto.PagoInsuficienteException {//Creacion de Metodo del tipo Bebida para comprar una bebida
         if (m == null) {
@@ -44,51 +56,31 @@ public class Expendedor {
                     } else {
                         if (Tipo == COCA && m.getValor() >= precio && coca.empty() == false) {
                             vuelto = m.getValor() - precio;
-
-                            while (true) {
-                                if (vuelto <= 0) {
-                                    break;
-                                }
-                                vuelto = vuelto - 100;
                                 for (int i = 0; i < vuelto / 100; ++i) {
                                     dep.addMoneda(new Moneda100());
                                 }
-
+                                    return coca.getBebida();
                             }
 
-                            return coca.getBebida();
-                        } else if (Tipo == SPRITE && m.getValor() >= precio && sprite.empty() == false) {
+                           
+                         else if (Tipo == SPRITE && m.getValor() >= precio && sprite.empty() == false) {
                             vuelto = m.getValor() - precio;
-
-                            while (true) {
-                                if (vuelto <= 0) {
-                                    break;
-                                }
-                                vuelto = vuelto - 100;
                                 for (int i = 0; i < vuelto / 100; ++i) {
                                     dep.addMoneda(new Moneda100());
                                 }
-
+                                return sprite.getBebida();
                             }
-
-                            return sprite.getBebida();
-                        } else if (Tipo == FANTA && m.getValor() >= precio && fanta.empty() == false) {
+                         else if (Tipo == FANTA && m.getValor() >= precio && fanta.empty() == false) {
                             vuelto = m.getValor() - precio;
-
-                            while (true) {
-                                if (vuelto <= 0) {
-                                    break;
-                                }
-                                vuelto = vuelto - 100;
                                 for (int i = 0; i < vuelto / 100; ++i) {
                                     dep.addMoneda(new Moneda100());
                                 }
-
+                                return fanta.getBebida();
                             }
 
-                            return fanta.getBebida();
+                            
 
-                        } else {
+                         else {
                             return null;
                         }
 

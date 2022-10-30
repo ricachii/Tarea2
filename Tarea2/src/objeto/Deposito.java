@@ -20,9 +20,14 @@ public class Deposito {
             return null;
         }else{
             return a1.remove(0);
+        
         }
         
-    }   
+    }
+    public int getSerie(){
+        return a1.get(0).getserie();
+    }
+    
     public boolean empty(){
        return a1.isEmpty();
     }

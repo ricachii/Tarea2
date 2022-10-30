@@ -5,8 +5,9 @@ import java.util.logging.Logger;
 
 public class Comprador {
     private String sabor;
-    private int tipo, vueltocompleto = 0;
+    private int tipo, vueltocompleto = 0, serie;
     public Comprador(Moneda M, Expendedor e, int x) {      
+        serie = e.getSerie(x);
         try {
             sabor = e.comprarBebida(M, x).beber();
         } catch (PagoIncorrectoException | NoHayBebidaException | PagoInsuficienteException ex) {
@@ -29,4 +30,8 @@ public class Comprador {
         return vueltocompleto;
       
     }
+    public int getSerie(){
+        return serie;
+    }
+    
 }
